@@ -1,0 +1,14 @@
+numpy
+bs4
+requests
+scipy
+matplotlib
+pandas
+streamlit
+seaborn
+pybase64
+streamlit-aggrid
+plotly
+streamlit-option-menu
+streamlit-lottie
+
