@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  projetdevops:
+    image: projetdevops
+    build:
+      context: .
+      dockerfile: ./Dockerfile
