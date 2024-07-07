@@ -38,7 +38,7 @@ jobs:
       #     registry: ${{ env.REGISTRY }}
       #     username: ${{ github.actor }}
       #     password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Log inti registry ${{ env.REGISTRY }}
+      - name: Log into registry ${{ env.REGISTRY }}
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push Docker image
         #run: docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/projet_devops:${{ github.sha}}
