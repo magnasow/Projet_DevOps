@@ -36,5 +36,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push Docker image
-        run: docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME}}:${{ github.sha}}
+        run: docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/projet_devops:${{ github.sha}}
 
