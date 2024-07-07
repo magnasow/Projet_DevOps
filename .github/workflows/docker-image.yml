@@ -19,7 +19,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+      packages: write
+      
     steps:
       - name: Checkout repo  
         uses: actions/checkout@v4
@@ -37,4 +39,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push Docker image
         run: docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/projet_devops:${{ github.sha}}
+        
 
