@@ -28,7 +28,7 @@ jobs:
       - name: Build the Docker image
         #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
         #run: docker build . --file Dockerfile --tag ${{ env.REGISTRY }}/${{ github.repository_owner}}/projet_devops:${{ github.sha}}
-        run: docker build . --file Dockerfile --tag ${{ env.REGISTRY }}:${{ github.sha}}
+        run: docker build . --file Dockerfile --tag ${{ env.REGISTRY }}:latest
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
       # - name: Log into registry ${{ env.REGISTRY }}
@@ -42,6 +42,6 @@ jobs:
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push Docker image
         #run: docker push ${{ env.REGISTRY }}/${{ github.repository_owner }}/projet_devops:${{ github.sha}}
-        run: docker push ${{ env.REGISTRY }}:${{ github.sha}}
+        run: docker push ${{ env.REGISTRY }}:latest
         
 
